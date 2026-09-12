@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Fredoka', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, .font-cartoon {
+    font-family: 'Fredoka', cursive, sans-serif;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-float {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+
+@keyframes sway-seaweed {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(6deg) skewX(2deg);
+  }
+}
+
+.animate-seaweed-1 {
+  transform-origin: bottom center;
+  animation: sway-seaweed 5s ease-in-out infinite;
+}
+
+.animate-seaweed-2 {
+  transform-origin: bottom center;
+  animation: sway-seaweed 6.5s ease-in-out infinite reverse;
+}
+
+@keyframes pulse-jellyfish {
+  0%, 100% {
+    transform: scale(1) translateY(0px);
+  }
+  40% {
+    transform: scale(1.08, 0.88) translateY(-14px);
+  }
+  70% {
+    transform: scale(0.95, 1.04) translateY(-8px);
+  }
+}
+
+.animate-jellyfish {
+  animation: pulse-jellyfish 3.2s ease-in-out infinite;
+}
+
+@keyframes rays-shift {
+  0%, 100% {
+    opacity: 0.35;
+    transform: rotate(-1deg) scaleX(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: rotate(2deg) scaleX(1.1);
+  }
+}
+
+.animate-sunrays {
+  transform-origin: top center;
+  animation: rays-shift 7s ease-in-out infinite;
+}
+
+@keyframes swim-across {
+  0% {
+    transform: translateX(110vw) translateY(0px);
+  }
+  50% {
+    transform: translateX(50vw) translateY(-15px);
+  }
+  100% {
+    transform: translateX(-20vw) translateY(10px);
+  }
+}
+
+.animate-swim-across {
+  animation: swim-across 22s linear infinite;
+}
+
+/* Custom underwater scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #02182b;
+}
+::-webkit-scrollbar-thumb {
+  background: #00b4d8;
+  border-radius: 9999px;
+  border: 2px solid #02182b;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd54f;
+}
