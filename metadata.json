@@ -1,0 +1,6 @@
+{
+  "name": "Bikini Bottom Codeathon 2026",
+  "description": "India's premier undersea 24-hour hackathon in Bikini Bottom with interactive roadmap, character dialogues, and pirate treasure bounty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
